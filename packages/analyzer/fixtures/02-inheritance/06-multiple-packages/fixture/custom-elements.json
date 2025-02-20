@@ -18,6 +18,30 @@
                 "text": "string"
               },
               "default": "'otherValueThanProp'"
+            },
+            {
+              "kind": "field",
+              "name": "extMixinProp",
+              "type": {
+                "text": "string"
+              },
+              "default": "'prop'",
+              "inheritedFrom": {
+                "name": "MyClass",
+                "module": "MyClass.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "extScoped",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "inheritedFrom": {
+                "name": "MyClass",
+                "module": "MyClass.js"
+              }
             }
           ],
           "superclass": {
@@ -55,7 +79,6 @@
               "default": "'otherValueThanProp'",
               "inheritedFrom": {
                 "name": "MyClass",
-                "package": "ext-pkg-without-export-map",
                 "module": "MyClass.js"
               }
             },
@@ -68,7 +91,6 @@
               "default": "'three'",
               "inheritedFrom": {
                 "name": "MyClass",
-                "package": "ext-pkg-without-export-map",
                 "module": "MyClass.js"
               }
             }
@@ -107,20 +129,48 @@
           "kind": "class",
           "description": "",
           "name": "MyElement3",
+          "superclass": {
+            "name": "MyClass",
+            "package": "@other-package/same-path/MyClass.js"
+          },
           "members": [
             {
               "kind": "field",
-              "name": "extClassProp",
+              "name": "extMixinProp",
               "type": {
                 "text": "string"
               },
-              "default": "'otherValueThanProp'"
+              "default": "'prop'",
+              "inheritedFrom": {
+                "name": "MyClass",
+                "module": "MyClass.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "shouldNotApear",
+              "type": {
+                "text": "string"
+              },
+              "default": "'no'",
+              "inheritedFrom": {
+                "name": "MyClass",
+                "module": "MyClass.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "otherPackage",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "inheritedFrom": {
+                "name": "MyClass",
+                "module": "MyClass.js"
+              }
             }
-          ],
-          "superclass": {
-            "name": "OtherElement",
-            "package": "@other-package/same-path/OtherElement.js"
-          }
+          ]
         }
       ],
       "exports": [
